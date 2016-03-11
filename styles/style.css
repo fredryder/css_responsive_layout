@@ -61,16 +61,40 @@ img {
   max-width: 100%;
 }
 
+#cultivars ul,
+#cultivars li {
+  margin-bottom: 1em;
+}
+
+.cultivar-name {
+  font-variant: small-caps;
+}
+
+
+.cultivar-name:after {
+  content: ':';
+}
+
+.cultivar-name:first-letter {
+  font-size: 5em;
+}
+
+
 /*
 BASIC LAYOUT
 https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
 https://developer.mozilla.org/en-US/docs/Web/CSS/display
  */
 
- .col {
+.col {
   padding-left: 1rem;
   padding-right: 1rem;
- }
+}
+
+.header {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
 
   /* Style header link buttons */
 .header a {
@@ -137,8 +161,30 @@ with a width of 769 pixels or more
     min-height: calc( 100vh - 68px );
   }
 
-
   /* YOUR CODE HERE */
+
+  .col {
+    float: left;
+  }
+
+  .primary,
+  .secondary {
+    width: 50%;
+  }
+
+  .home {
+    float: left;
+    display: inline-block;
+  }
+
+  .nav li{
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .nav {
+    float: right;
+  }
 
   /* clearfix
   https://css-tricks.com/snippets/css/clear-fix/
@@ -160,3 +206,20 @@ with a width of 1025 pixels or more
  */
 
  /* YOUR CODE HERE */
+
+ @media (min-width: 1025px) {
+
+  .container {
+    width: 80%;
+    max-width: 1025px;
+  }
+
+  .primary {
+    width: 40%;
+  }
+
+  .secondary,
+  .tertiary {
+    width: 30%;
+  }
+ }
